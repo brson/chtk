@@ -3,14 +3,19 @@
     --em-color: cyan;
     --bg-color: black;
     --fg-color: white;
+    --link-color: magenta;
 }
 
 .front .title h1 {
     color: var(--title-color);
 }
 
-.front .title em {
+em {
     color: var(--em-color);
+}
+
+a {
+    color: var(--link-color);
 }
 
 * {
@@ -54,10 +59,12 @@ li {
     text-indent: -2rem;
 }
 
+/*
 li > ul > li {
     padding-left: 0rem;
     text-indent: -2rem;
 }
+*/
 
 body {
     margin: 1.5rem;
@@ -85,9 +92,11 @@ div, p, h1, h2, pre {
     margin-bottom: 1rem;
 }
 
+/*
 ul > li > ul {
     margin-left: 2rem;
 }
+*/
 
 .front .title em {
     text-transform: uppercase;
