@@ -56,8 +56,8 @@ ul {
 /* custom list bullet ... */
 li::before {
     content: "* ";
-    content: "• ";
     content: "○ ";
+    content: "• ";
 }
 
 /* ... with hanging indents */
