@@ -1,0 +1,8 @@
+[package]
+name = "chtk_sys_ckb"
+version = "0.1.0"
+authors = ["Brian Anderson <andersrb@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+chtk_sys_api = { path = "../api" }

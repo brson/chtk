@@ -1,0 +1,12 @@
+[workspace]
+members = [
+"lib/bind/rust",
+"lib/rt",
+"lib/sys/api",
+"lib/sys/ckb",
+"lib/sys/impl",
+"lib/sys/near",
+"lib/sys/polkadot",
+"lib/sys/solana",
+"tool",
+]
