@@ -4,9 +4,12 @@ version = "0.1.0"
 authors = ["Brian Anderson <andersrb@gmail.com>"]
 edition = "2018"
 
+[features]
+default = []
+
 [dependencies]
 chtk_sys_api = { path = "../api" }
-chtk_sys_ckb = { path = "../ckb" }
-chtk_sys_near = { path = "../near" }
-chtk_sys_polkadot = { path = "../polkadot" }
-chtk_sys_solana = { path = "../solana" }
+chtk_sys_ckb = { path = "../ckb", optional = true }
+chtk_sys_near = { path = "../near", optional = true }
+chtk_sys_polkadot = { path = "../polkadot", optional = true }
+chtk_sys_solana = { path = "../solana", optional = true }

@@ -6,3 +6,4 @@ edition = "2018"
 
 [dependencies]
 chtk_rt = { path = "../../rt" }
+chtk_sys_impl = { path = "../../sys/impl" }

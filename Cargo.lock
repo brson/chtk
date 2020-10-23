@@ -5,6 +5,7 @@ name = "chtk"
 version = "0.1.0"
 dependencies = [
  "chtk_rt",
+ "chtk_sys_impl",
 ]
 
 [[package]]
