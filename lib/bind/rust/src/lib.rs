@@ -12,11 +12,11 @@ pub fn abort(msg: &str) -> ! {
     rt::chtk_abort(buf.as_ptr());
 }
 
-pub struct Context;
+pub struct Context(*mut rt::Context);
 
 impl Context {
     fn get() -> Context {
-        panic!()
+        rt
     }
 }
 

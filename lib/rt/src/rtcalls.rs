@@ -11,7 +11,7 @@ pub type c_char = i8;
 pub struct Context;
 
 #[no_mangle]
-pub extern fn chtk_malloc(bytes: usize) -> *mut u8 {
+pub extern unsafe fn chtk_malloc(bytes: usize) -> *mut u8 {
     panic!()
 }
 
