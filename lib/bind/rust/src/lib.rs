@@ -8,9 +8,10 @@ use alloc::vec::Vec;
 use chtk_rt::rtcalls as rt;
 
 pub fn abort(msg: &str) -> ! {
-    let buf = c_string(msg);
+    let ptr = msg.as_ptr() as *const rt::c_char;
+    let len  = msg.len();
     unsafe {
-        rt::chtk_abort(buf.as_ptr());
+        rt::chtk_abort(ptr, len);
     }
 }
 
@@ -28,8 +29,4 @@ impl Drop for Context {
     fn drop(&mut self) {
         unsafe { rt::chtk_free_context(self.0) }
     }
-}
-
-fn c_string(s: &str) -> Vec<rt::c_char> {
-    panic!()
 }

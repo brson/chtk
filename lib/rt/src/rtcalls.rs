@@ -21,7 +21,7 @@ pub unsafe extern fn chtk_free(ptr: *mut u8) {
 }
 
 #[no_mangle]
-pub unsafe extern fn chtk_abort(msg: *const c_char) -> ! {
+pub unsafe extern fn chtk_abort(msg: *const c_char, len: usize) -> ! {
     panic!()
 }
 
