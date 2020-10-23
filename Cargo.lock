@@ -12,6 +12,7 @@ dependencies = [
 name = "chtk_rt"
 version = "0.1.0"
 dependencies = [
+ "chtk_sys_api",
  "chtk_sys_impl",
 ]
 
