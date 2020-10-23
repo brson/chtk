@@ -9,20 +9,24 @@ use chtk_rt::rtcalls as rt;
 
 pub fn abort(msg: &str) -> ! {
     let buf = c_string(msg);
-    rt::chtk_abort(buf.as_ptr());
+    unsafe {
+        rt::chtk_abort(buf.as_ptr());
+    }
 }
 
 pub struct Context(*mut rt::Context);
 
 impl Context {
     fn get() -> Context {
-        rt
+        let ctx = unsafe { rt::chtk_get_context() };
+        assert!(!ctx.is_null());
+        Context(ctx)
     }
 }
 
 impl Drop for Context {
     fn drop(&mut self) {
-        panic!()
+        unsafe { rt::chtk_free_context(self.0) }
     }
 }
 
