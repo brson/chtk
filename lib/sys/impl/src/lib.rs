@@ -5,6 +5,9 @@ use chtk_sys_api::Sys;
 pub struct SysImpl(imp::Sys);
 
 impl Sys for SysImpl {
+    fn abort(msg: &str) -> ! {
+        imp::Sys::abort(msg)
+    }
 }
 
 #[cfg(feature = "chtk_sys_ckb")]
